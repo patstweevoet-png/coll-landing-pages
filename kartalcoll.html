@@ -21,18 +21,22 @@
       max-width: 600px;
     }
     .logo {
-      width: 120px;
-      height: 120px;
-      background: #FFFFFF;
-      border-radius: 30px;
+      width: 140px;
+      height: 140px;
+      background: transparent;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 30px;
-      font-size: 60px;
-      font-weight: bold;
-      color: #000000;
-      box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 40px rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+    }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
     h1 {
       font-size: 48px;
@@ -47,8 +51,8 @@
     }
     .badge {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid #FFFFFF;
+      background: rgba(255, 255, 255, 0.02);
+      border: 2px solid rgba(255,255,255,0.06);
       padding: 12px 24px;
       border-radius: 50px;
       font-size: 16px;
@@ -72,7 +76,9 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">C</div>
+    <div class="logo">
+      <img src="kartalcoll-logo.png" alt="KARTALCOLL logo">
+    </div>
     <div class="badge">🦅 Beşiktaş Community</div>
     <h1>KARTALCOLL</h1>
     <p>Launching Soon</p>
