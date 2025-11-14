@@ -1,119 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collective Apps - Building Communities</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0A0E27;
-      color: #E0E0E0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .container {
-      text-align: center;
-      max-width: 800px;
-    }
-    .logo {
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 30px;
-      font-size: 50px;
-      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
-    }
-    h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-      font-weight: 800;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .tagline {
-      font-size: 22px;
-      color: #A0A0A0;
-      margin-bottom: 50px;
-    }
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 50px;
-    }
-    .app-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 25px;
-      transition: all 0.3s;
-    }
-    .app-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-5px);
-    }
-    .app-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-    .app-name {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .app-desc {
-      font-size: 14px;
-      color: #888;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(102, 126, 234, 0.1);
-      border: 1px solid rgba(102, 126, 234, 0.3);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      color: #667eea;
-      margin-bottom: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collective Apps - Building Communities</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0A0E27;
+            color: #E0E0E0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+        p {
+            font-size: 20px;
+            color: rgba(224, 224, 224, 0.7);
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        .apps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .app-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+        }
+        .app-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .app-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .app-desc {
+            font-size: 14px;
+            color: rgba(224, 224, 224, 0.6);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">⬡</div>
-    <div class="badge">🚀 Launching Soon</div>
-    <h1>COLLECTIVE APPS</h1>
-    <p class="tagline">Building the future of fan communities</p>
-    
-    <div class="apps">
-      <div class="app-card">
-        <div class="app-icon">📍</div>
-        <div class="app-name">KADICOLL</div>
-        <div class="app-desc">Fenerbahçe fans</div>
-      </div>
-      
-      <div class="app-card">
-        <div class="app-icon">🦅</div>
-        <div class="app-name">KARTALCOLL</div>
-        <div class="app-desc">Beşiktaş fans</div>
-      </div>
-      
-      <div class="app-card">
-        <div class="app-icon">🦁</div>
-        <div class="app-name">ASLANCOLL</div>
-        <div class="app-desc">Galatasaray fans</div>
-      </div>
+    <div class="container">
+        <div class="logo">⬡</div>
+        <div class="badge">🚀 Launching Soon</div>
+        <h1>COLLECTIVE APPS</h1>
+        <p>Building the future of fan communities</p>
+
+        <div class="apps">
+            <a href="kadicoll.html" class="app-card">
+                <div class="app-icon">
+                    <img src="kadicoll-logo.png" alt="KADICOLL">
+                </div>
+                <div class="app-name">KADICOLL</div>
+                <div class="app-desc">Fenerbahçe fans</div>
+            </a>
+
+            <a href="kartalcoll.html" class="app-card">
+                <div class="app-icon">🦅</div>
+                <div class="app-name">KARTALCOLL</div>
+                <div class="app-desc">Beşiktaş fans</div>
+            </a>
+
+            <a href="aslancoll.html" class="app-card">
+                <div class="app-icon">🦁</div>
+                <div class="app-name">ASLANCOLL</div>
+                <div class="app-desc">Galatasaray fans</div>
+            </a>
+        </div>
     </div>
-  </div>
 </body>
 </html>
